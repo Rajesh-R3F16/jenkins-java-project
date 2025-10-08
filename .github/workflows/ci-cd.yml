@@ -49,6 +49,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: my-java-app
+          path: target/
 
       # 2️⃣ Copy WAR to EC2 instance using PEM key
       - name: Copy WAR to EC2
