@@ -3,11 +3,13 @@ name: Maven Build and Deploy to JBoss
 on:
   push:
     branches: [ main ]
+    paths:
       - '**.java'
       - 'pom.xml'
-      - '.github/workflows/ci-cd.yaml'
+      - '.github/workflows/ci-cd.yaml'      # 🧩 Run when this file changes
   pull_request:
     branches: [ main ]
+  workflow_dispatch:                        # 🧠 Allow manual runs from Actions tab
 
 jobs:
   build:
@@ -37,5 +39,3 @@ jobs:
           path: target/*.war
 
   
-
-   
