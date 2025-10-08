@@ -55,7 +55,7 @@ jobs:
       - name: Verify WAR exists
         run: |
           echo "Listing downloaded artifact folder:"
-          ls -l my-java-app
+          ls -lR .
 
       # 3️⃣ Copy WAR to EC2 dynamically
       - name: Copy WAR to EC2
