@@ -64,5 +64,5 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ec2-user
           key: ${{ secrets.EC2_PEM_KEY }}
-          source: "$(ls my-java-app/*.war)"   # dynamically finds WAR
+          source: "*.war"   # dynamically finds WAR
           target: "/opt/wildfly/standalone/deployments/"
