@@ -3,6 +3,9 @@ name: Maven Build and Deploy to JBoss
 on:
   push:
     branches: [ main ]
+      - '**.java'
+      - 'pom.xml'
+      - '.github/workflows/ci-cd.yaml'
   pull_request:
     branches: [ main ]
 
